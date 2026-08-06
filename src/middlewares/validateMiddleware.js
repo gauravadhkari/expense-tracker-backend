@@ -7,7 +7,8 @@ const validate = async (req,res,next) => {
       success:false,
       errors:errors.array()
     })
-  }
+  }else{
   next();
+  }
 }
 module.exports = validate
