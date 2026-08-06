@@ -7,7 +7,7 @@ const signup = asyncHandler(async (req,res) => {
     const {name , email , password} = req.body;
     const errors = validationResult(req);
        if(!errors.isEmpty()){
-         res.status(400).json({
+         return res.status(400).json({
            success:false,
            errors:errors.array()
          })
