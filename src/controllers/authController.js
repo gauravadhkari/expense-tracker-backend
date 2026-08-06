@@ -72,7 +72,8 @@ const login = asyncHandler(async (req,res) => {
     const token = jwt.sign(
       {
         id : user._id, // PAYLOAD
-        email : user.email
+        email : user.email,
+        name : user.name
       },
       process.env.JWT_SECRET, // SECRET KEY
       {
