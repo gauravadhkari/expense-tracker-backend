@@ -10,7 +10,7 @@ app.use(cors({
 );
 app.use(morgan("dev"));
 app.use(express.json());
-const authRoutes = require("./routes/authRoutes");
+const authRoutes = require("./routes/authroutes");
 const transactionRoutes = require("./routes/transactionRoutes");
 const errorHandler = require("./middlewares/errorHandler");
 app.use("/api/auth", authRoutes)
