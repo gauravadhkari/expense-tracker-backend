@@ -1,6 +1,6 @@
 const User = require("../models/User"); // adjust filename to match your actual model
 const asyncHandler = require("../utils/asyncHandler");
-
+const bcrypt = require("bcryptjs")
 // GET /user — fetch the logged-in user's profile
 // Used by ViewProfile.jsx
 exports.getProfile = asyncHandler(async (req, res) => {
