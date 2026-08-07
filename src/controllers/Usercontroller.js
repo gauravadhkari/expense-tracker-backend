@@ -47,7 +47,7 @@ exports.deleteAccount = asyncHandler(async (req, res) => {
   res.json({ message: "Account deleted" });
 });
 
-const changePasswordHandler = asyncHandler(async (req, res) => {
+exports.changePasswordHandler = asyncHandler(async (req, res) => {
     const { currentPassword, newPassword } = req.body;
  
     if (!currentPassword || !newPassword) {
@@ -70,5 +70,3 @@ const changePasswordHandler = asyncHandler(async (req, res) => {
  
     res.json({ message: "Password updated successfully" });
   } );
-
-  module.exports = {changePasswordHandler }
