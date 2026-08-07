@@ -12,11 +12,13 @@ app.use(cors({
 );
 app.use(morgan("dev"));
 app.use(express.json());
+const userRoutes = require("./routes/userRoutes"); // new
 const authRoutes = require("./routes/authroutes");
 const transactionRoutes = require("./routes/transactionRoutes");
 const errorHandler = require("./middlewares/errorHandler");
 app.use("/api/auth", authRoutes)
 app.use("/api/transactions", transactionRoutes)
+app.use("/user", userRoutes); // <-- new
 app.use(errorHandler)
 app.get('/' , (req,res) => {
   res.status(200).json({

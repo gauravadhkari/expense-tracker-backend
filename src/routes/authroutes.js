@@ -8,4 +8,6 @@ const  validate  = require("../middlewares/validateMiddleware");
 
 router.post("/signup",signupValidator,validate,signup)
 router.post("/login", login)
+router.put("/change-password", authMiddleware, changePassword);
+
 module.exports = router;
