@@ -12,7 +12,7 @@ app.use(cors({
 );
 app.use(morgan("dev"));
 app.use(express.json());
-const userRoutes = require("./routes/Userroutes"); // new
+const userRoutes = require("./routes/userRoutes"); // new
 const authRoutes = require("./routes/authroutes");
 const transactionRoutes = require("./routes/transactionRoutes");
 const errorHandler = require("./middlewares/errorHandler");
