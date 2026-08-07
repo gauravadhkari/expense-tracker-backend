@@ -18,7 +18,7 @@ const transactionRoutes = require("./routes/transactionRoutes");
 const errorHandler = require("./middlewares/errorHandler");
 app.use("/api/auth", authRoutes)
 app.use("/api/transactions", transactionRoutes)
-app.use("/user", Userroutes); // <-- new
+app.use("/user", userRoutes); // <-- new
 app.use(errorHandler)
 app.get('/' , (req,res) => {
   res.status(200).json({
