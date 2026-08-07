@@ -9,6 +9,4 @@ const authMiddleware = require("../middlewares/authMiddleware");
 
 router.post("/signup",signupValidator,validate,signup)
 router.post("/login", login)
-router.post("/change-password",authMiddleware,changePasswordHandler)
-
 module.exports = router;
