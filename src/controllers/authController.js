@@ -87,8 +87,7 @@ const login = asyncHandler(async (req,res) => {
     });
 });
  
-async function changePasswordHandler(req, res) {
-  try {
+const changePasswordHandler = asyncHandler(async (req, res) => {
     const { currentPassword, newPassword } = req.body;
  
     if (!currentPassword || !newPassword) {
@@ -110,11 +109,7 @@ async function changePasswordHandler(req, res) {
     await user.save();
  
     res.json({ message: "Password updated successfully" });
-  } catch (error) {
-    console.log(error.message);
-    res.status(500).json({ message: "Failed to update password" });
-  }
-}
+  } );
  
  
 module.exports = { signup,login,changePasswordHandler }
